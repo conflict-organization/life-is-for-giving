@@ -2,19 +2,16 @@
 /* eslint-disable quotes */
 "use strict";
 // arrays of options that can user donate with and more details
-var allItems = ["books", "furniture", "clothes", "school-Supplies", "blanket", "toys"];
-var qualityArray = ["New", "Used"];
-var cities = [
-  "Amman",
-  "Irbid",
-  "Al-mafraq",
-  "Zarqa",
-  "Aqaba",
-  "Jerash",
-  "Madaba",
-  "Kerak",
-  "Ma'an",
+var allItems = [
+  "books",
+  "furniture",
+  "clothes",
+  "school-Supplies",
+  "blanket",
+  "toys",
 ];
+var qualityArray = ["New", "Used"];
+var cities = ["Amman", "Irbid"];
 /*this array contain all object after get it from local storage */
 var itemFromLocalStorage = [];
 // global variables
@@ -88,8 +85,7 @@ function sendToLocalStorage() {
   // console.log(sendArray);
   localStorage.setItem("donatesInLocalStorage", sendArray);
 }
-var getArray,
-  getJSON;
+var getArray, getJSON;
 function getFromLocalStorage() {
   getJSON = localStorage.getItem("donatesInLocalStorage");
   // console.log(getJSON);
